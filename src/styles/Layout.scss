@@ -1,0 +1,182 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  width: 98%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+  }
+}
+
+.sidebar button:first-child {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.sidebar button.close-btn {
+  color: red;
+}
+
+.sidebar button:not(:first-child)::before {
+  content: '\00b7';
+  margin-right: 0.5rem;
+}
+
+/* Footer Styles */
+.footer {
+  background: #424649;
+  color: #ffffff;
+  clear: both;
+  font-size: 1em;
+  padding: 2em 0;
+  min-height: 1em;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+
+.centered-message {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 30px;
+  width: 300px;
+  box-shadow: 10px 20px 20px rgba(1, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 40px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 8px 35px 8px 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #cccccc;
+  font-size: 20px;
+}
+
+
+button {
+  margin-right: 10px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  border: 25px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
+}
+
+.error {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.home-icon {
+  font-size: 25px;
+}
